@@ -1,11 +1,11 @@
 {
   "name": "@benparr64/kegthat-components",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Kegthat React Component Library",
   "scripts": {
     "rollup": "rollup -c"
   },
-  "author": "Alex Eagleson",
+  "author": "Ben Parr",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
@@ -24,7 +24,9 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/BenParr64"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benparr64/kegthat-components.git"
   }
+  
 }
