@@ -1,7 +1,8 @@
 {
   "name": "@benparr64/kegthat-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Kegthat React Component Library",
+  "private": false,
   "scripts": {
     "rollup": "rollup -c"
   },
@@ -15,6 +16,7 @@
     "react": "^17.0.2",
     "rollup": "^2.60.0",
     "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.4.0",
     "typescript": "^4.4.4"
   },
@@ -24,9 +26,8 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/benparr64/kegthat-components.git"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/benparr64",
+    "access": "public"
   }
-  
 }
