@@ -1,5 +1,5 @@
 {
-  "name": "kegthat-components",
+  "name": "@benparr/kegthat-components",
   "version": "0.0.1",
   "description": "Kegthat React Component Library",
   "scripts": {
@@ -10,10 +10,12 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.5.0",
     "@types/react": "^17.0.34",
     "react": "^17.0.2",
     "rollup": "^2.60.0",
     "rollup-plugin-dts": "^4.0.1",
+    "tslib": "^2.4.0",
     "typescript": "^4.4.4"
   },
   "main": "dist/cjs/index.js",
@@ -22,8 +24,7 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "dependencies": {
-    "@rollup/plugin-typescript": "^8.3.3",
-    "tslib": "^2.4.0"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/BenParr64"
   }
 }
