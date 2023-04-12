@@ -1,0 +1,596 @@
+{
+  "logo": "https://kegthat.com/wp-content/uploads/2020/05/cropped-keg-that.jpg",
+  "navLinks": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "Kits",
+      "url": "/kits",
+      "children": {
+        "options": {},
+        "links": [
+          {
+            "title": "Wine Kit Brands",
+            "url": "/product-category/home-brew-starter-kits/home-brew-wine-starter-kits/",
+            "children": {
+              "options": {},
+              "links": [
+                {
+                  "title": "Australlian Blend",
+                  "url": "/product-category/home-brew-starter-kits/home-brew-wine-starter-kits/australian-blend/"
+                },
+                {
+                  "title": "Beaverdale Wine Kits",
+                  "url": "/product-category/home-brew-starter-kits/home-brew-wine-starter-kits/beaverdale/"
+                },
+                {
+                  "title": "Cantina",
+                  "url": "/product-category/home-brew-starter-kits/home-brew-wine-starter-kits/cantina/"
+                },
+                {
+                  "title": "Cellar7",
+                  "url": "/product-category/home-brew-starter-kits/home-brew-wine-starter-kits/cellar7-wine-kits/"
+                },
+                {
+                  "title": "Magnum",
+                  "url": "/product-category/home-brew-starter-kits/home-brew-wine-starter-kits/magnum-wine-kits/"
+                },
+                {
+                  "title": "On The House OTH",
+                  "url": "/product-category/home-brew-starter-kits/home-brew-wine-starter-kits/on-the-house-wine-kits/"
+                },
+                {
+                  "title": "Solomon Grundy",
+                  "url": "/product-category/home-brew-starter-kits/home-brew-wine-starter-kits/solomon-grundy/"
+                },
+                {
+                  "title": "Wine Buddy",
+                  "url": "/product-category/home-brew-starter-kits/home-brew-wine-starter-kits/winebuddy/"
+                },
+                {
+                  "title": "WinExpert Wine kits",
+                  "url": "/product-category/home-brew-starter-kits/home-brew-wine-starter-kits/winexpert/"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Wine Kit Styles",
+            "url": "/product-category/home-brew-starter-kits/wine-kits-by-type/",
+            "children": {
+              "options": {},
+              "links": [
+                {
+                  "title": "Merlot Wine Kits",
+                  "url": "/product-category/home-brew-starter-kits/wine-kits-by-type/red-wine-kits/merlot/"
+                },
+                {
+                  "title": "Malbec Wine Kits",
+                  "url": "/product-category/home-brew-starter-kits/wine-kits-by-type/red-wine-kits/malbec/"
+                },
+                {
+                  "title": "Shiraz",
+                  "url": "/product-category/home-brew-starter-kits/wine-kits-by-type/red-wine-kits/shiraz/"
+                },
+                {
+                  "title": "Cabernet Sauvignon Wine Kits",
+                  "url": "/product-category/home-brew-starter-kits/wine-kits-by-type/red-wine-kits/cabernet-sauvignon/"
+                },
+                {
+                  "title": "Rioja Style",
+                  "url": "/product-category/home-brew-starter-kits/wine-kits-by-type/red-wine-kits/rioja-style/"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Beer Kit Brands",
+            "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/",
+            "children": {
+              "options": {},
+              "links": [
+                {
+                  "title": "Muntons Taproom",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/muntons-taproom/"
+                },
+                {
+                  "title": "Simply",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/simply-beer-kits/"
+                },
+                {
+                  "title": "Coopers",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/coopers/"
+                },
+                {
+                  "title": "Festival Beer Kits",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/festival/"
+                },
+                {
+                  "title": "John Bull",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/john-bull-home-brew-beer-starter-kits/"
+                },
+                {
+                  "title": "Mangrove Jacks",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/mangrove-jakcs/"
+                },
+                {
+                  "title": "Muntons",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/muntons/"
+                },
+                {
+                  "title": "Muntons Flagship",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/muntons-flagship/"
+                },
+                {
+                  "title": "St Peters",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/st-peters/"
+                },
+                {
+                  "title": "Youngs Beer Kits",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/youngs-beer-kits/"
+                },
+                {
+                  "title": "Woodfordes",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/woodfordes-home-brew-beer-starter-kits/"
+                },
+                {
+                  "title": "Bulldog",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/bulldog/"
+                },
+                {
+                  "title": "Better Brew",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/better-brew/"
+                },
+                {
+                  "title": "Brewery Beers",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/brewery-beers/"
+                },
+                {
+                  "title": "Geordie",
+                  "url": "/product-category/home-brew-starter-kits/homebrew-beer-starter-kits/geordie/"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Beer Kit Styles",
+            "url": "/product-category/home-brew-starter-kits/beer-kits-brands/",
+            "children": {
+              "options": {},
+              "links": [
+                {
+                  "title": "Christmas Beer Kits",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/christmas-beer-kits/"
+                },
+                {
+                  "title": "IPA",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/beer-kits-ipas/"
+                },
+                {
+                  "title": "Pale Ale Beer Kits",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/pale-ale-beer-kits/"
+                },
+                {
+                  "title": "Stout",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/stout-beer-kits/"
+                },
+                {
+                  "title": "Bitter",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/beer-kits-bitters/"
+                },
+                {
+                  "title": "Blonde",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/beer-kits-blondes/"
+                },
+                {
+                  "title": "Pilsner",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/beer-kits-pilsners/"
+                },
+                {
+                  "title": "Gluten Free Beer Kits",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/gluten-free-beer-kits/"
+                },
+                {
+                  "title": "Lager",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/beer-kits-lagers/"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Cider Kits",
+            "url": "/product-category/home-brew-starter-kits/home-brew-cider-making-starter-kits/",
+            "children": {
+              "options": {},
+              "links": [
+                {
+                  "title": "Christmas Beer Kits",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/christmas-beer-kits/"
+                },
+                {
+                  "title": "IPA",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/beer-kits-ipas/"
+                },
+                {
+                  "title": "Pale Ale Beer Kits",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/pale-ale-beer-kits/"
+                },
+                {
+                  "title": "Stout",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/stout-beer-kits/"
+                },
+                {
+                  "title": "Bitter",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/beer-kits-bitters/"
+                },
+                {
+                  "title": "Blonde",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/beer-kits-blondes/"
+                },
+                {
+                  "title": "Pilsner",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/beer-kits-pilsners/"
+                },
+                {
+                  "title": "Gluten Free Beer Kits",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/gluten-free-beer-kits/"
+                },
+                {
+                  "title": "Lager",
+                  "url": "/product-category/home-brew-starter-kits/beer-kits-brands/beer-kits-lagers/"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "title": "Equipment",
+      "children": {
+        "options": {},
+        "links": [
+          {
+            "title": "Brands",
+            "children": {
+              "options": {},
+              "links": [
+                {
+                  "title": "Grainfather",
+                  "url": "/about"
+                },
+                {
+                  "title": "Keg King",
+                  "url": "/about"
+                },
+                {
+                  "title": "Still Spirits",
+                  "url": "/about"
+                },
+                {
+                  "title": "Bulldog",
+                  "url": "/about"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Bottles and bottling",
+            "url": "/product-category/home-brewing-equipment/bottles-and-bottling-equipment/",
+            "children": {
+              "links": [
+                {
+                  "title": "Beer & Cider Bottles",
+                  "url": "/product-category/home-brewing-equipment/bottles-and-bottling-equipment/beer-cider-bottles/"
+                },
+                {
+                  "title": "Bottle Cappers & Caps",
+                  "url": "/product-category/home-brewing-equipment/bottles-and-bottling-equipment/bottle-cappers/"
+                },
+                {
+                  "title": "Wine Bottles",
+                  "url": "/product-category/home-brewing-equipment/bottles-and-bottling-equipment/wine-bottles/"
+                },
+                {
+                  "title": "Wine Corkers",
+                  "url": "/product-category/home-brewing-equipment/bottles-and-bottling-equipment/wine-corkers/"
+                },
+                {
+                  "title": "Wine Corks",
+                  "url": "/product-category/home-brewing-equipment/bottles-and-bottling-equipment/corks/"
+                },
+                {
+                  "title": "Bungs",
+                  "url": "/product-category/home-brewing-equipment/bottles-and-bottling-equipment/bungs/"
+                },
+                {
+                  "title": "Bottling Aids & Bottle Cleaning",
+                  "url": "/product-category/home-brewing-equipment/bottles-and-bottling-equipment/bottling-aids-bottle-cleaning/"
+                }
+              ],
+              "options": {}
+            }
+          },
+          {
+            "title": "Glasses & Bar Equipment",
+            "url": "/product-category/home-brewing-equipment/bar-equipment/",
+            "children": {
+              "links": [
+                {
+                  "title": "Beer Glasses",
+                  "url": "/product-category/home-brewing-equipment/bar-equipment/beer-glasses/"
+                },
+                {
+                  "title": "Beer Mats",
+                  "url": "/product-category/home-brewing-equipment/bar-equipment/beer-mats/"
+                },
+                {
+                  "title": "Vintage Beer Signs",
+                  "url": "/product-category/home-brewing-equipment/bar-equipment/metal-beer-signs/"
+                }
+              ],
+              "options": {}
+            }
+          }
+        ]
+      }
+    },
+    {
+      "title": "Spirits",
+      "url": "/product-category/spirits/",
+      "children": {
+        "links": [
+          {
+            "title": "Distilling Equipment",
+            "url": "/product-category/spirits/equipment/",
+            "children": {
+              "links": [
+                {
+                  "title": "Stills & Distilling",
+                  "url": "/product-category/spirits/equipment/stills-distilling/",
+                  "children": {
+                    "links": [
+                      {
+                        "title": "Distilling Parts & Hardware",
+                        "url": "/product-category/spirits/equipment/stills-distilling/distilling-parts-hardware/",
+                        "children": {
+                          "links": [],
+                          "options": {}
+                        }
+                      },
+                      {
+                        "title": "Still Spirits Air Still",
+                        "url": "/product-category/spirits/equipment/stills-distilling/still-spiris/",
+                        "children": {
+                          "links": [],
+                          "options": {}
+                        }
+                      },
+                      {
+                        "title": "Still Spirits T500",
+                        "url": "/product-category/spirits/equipment/stills-distilling/still-spirits-t500/",
+                        "children": {
+                          "links": [],
+                          "options": {}
+                        }
+                      }
+                    ],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Filtering",
+                  "url": "/product-category/spirits/equipment/filtering/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                }
+              ],
+              "options": {}
+            }
+          },
+          {
+            "title": "Essences & Flavourings",
+            "url": "/product-category/spirits/essences-flavourings/",
+            "children": {
+              "links": [
+                {
+                  "title": "Still Spirits Botanicals",
+                  "url": "/product-category/spirits/essences-flavourings/still-spirits-botanicals/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Still Spirits Classic Flavours",
+                  "url": "/product-category/spirits/essences-flavourings/still-spirits-classic-flavours/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Still Spirits Top Shelf Cream Liqueurs",
+                  "url": "/product-category/spirits/essences-flavourings/still-spirits-top-shelf-cream-liqueurs/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Still Spirits Top Shelf Liqueurs",
+                  "url": "/product-category/spirits/essences-flavourings/still-spirits-top-shelf-liqueurs/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Still Spirits Top Shelf Schnapps",
+                  "url": "/product-category/spirits/essences-flavourings/still-spirits-top-shelf-schnapps/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Still Spirits Top Shelf Spirits",
+                  "url": "/product-category/spirits/essences-flavourings/still-spirits-top-shelf-spirits/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Still Spirits Icon Top Ups",
+                  "url": "/product-category/spirits/essences-flavourings/still-spirits-icon-top-ups/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Still Spirits Oak Chips",
+                  "url": "/product-category/spirits/essences-flavourings/still-spirits-oak-chips/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Alcotec Flavourings",
+                  "url": "/product-category/spirits/essences-flavourings/alcotec-flavourings/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Still Spirits Vodka Flavourings",
+                  "url": "/product-category/still-spirits-vodka-flavourings/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Still Spirits Profile Range",
+                  "url": "/product-category/spirits/essences-flavourings/still-spirits-profile-range/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                }
+              ],
+              "options": {}
+            }
+          },
+          {
+            "title": "Yeasts, Carbons, Enzymes & Finings",
+            "url": "/product-category/spirits/carbons-finings/",
+            "children": {
+              "links": [
+                {
+                  "title": "Alcotec Yeasts",
+                  "url": "/product-category/spirits/carbons-finings/alcotec-yeasts/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Still Spirits Yeasts",
+                  "url": "/product-category/spirits/carbons-finings/still-spirits-yeasts/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Pathfinder Turbo Yeasts",
+                  "url": "/product-category/spirits/carbons-finings/pathfinder/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Turbo Carbon & Finings",
+                  "url": "/product-category/spirits/carbons-finings/turbo-carbon-finings/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Enzymes",
+                  "url": "/product-category/spirits/carbons-finings/enzymes-carbons-finings/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                }
+              ],
+              "options": {}
+            }
+          },
+          {
+            "title": "Bases",
+            "url": "/product-category/spirits/bases/",
+            "children": {
+              "links": [
+                {
+                  "title": "Still Spirits Bases",
+                  "url": "/product-category/spirits/bases/still-spirits-bases/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                }
+              ],
+              "options": {}
+            }
+          },
+          {
+            "title": "Beginners",
+            "url": "/product-category/spirits/beginners-spirits/",
+            "children": {
+              "links": [
+                {
+                  "title": "Spirits Starter Sets",
+                  "url": "/product-category/spirits/beginners-spirits/spirits-starter-sets/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                },
+                {
+                  "title": "Natural Fermentation Kits",
+                  "url": "/product-category/spirits/beginners-spirits/natural-fermentation-kits-spirits/",
+                  "children": {
+                    "links": [],
+                    "options": {}
+                  }
+                }
+              ],
+              "options": {}
+            }
+          }
+        ],
+        "options": {}
+      }
+    },
+    {
+      "title": "About",
+      "url": "/about"
+    },
+    {
+      "title": "Contact",
+      "url": "/contact"
+    }
+  ]
+}

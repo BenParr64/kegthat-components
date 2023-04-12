@@ -1,0 +1,84 @@
+/* Styling for the navigation bar sliding up and down when hovering over top level nav links */
+.dropdown {
+  animation-name: slide-down;
+  animation-duration: 0.5s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slideUp {
+  animation-name: slide-up;
+  animation-duration: 0.5s;
+}
+
+.textContainer {
+  animation-name: slide-down;
+  animation-duration: 0.3s;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Styling for managing the search bar slide in */
+
+.searchSlideIn {
+  animation-name: slide-left;
+  animation-duration: 0.5s;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.headerNavContainerSlideUp {
+  position: relative;
+  
+}
+
+.headerNavContainerSlideUpFocused {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: none;
+  animation-duration: 1s;
+}
+
+
+
+.searchContentContainer {
+  animation-name: search-content-slide;
+  animation-duration: 1s;
+  transform: translateX(0%) translateY(-40%);
+}
+
+@keyframes search-content-slide {
+  0% {
+    transform: translateX(100%) translateY(0%);
+  }
+  50% {
+    transform: translateX(0%) translateY(0%);
+  }
+  to {
+    transform: translateX(0%) translateY(-40%);
+  }
+}
