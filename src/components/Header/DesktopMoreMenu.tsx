@@ -6,12 +6,14 @@ export interface DesktopMoreMenuProps {
   dropdown?: Children;
   slideUp: boolean;
   slideUpText: boolean;
+  id: string;
 }
 
 const DesktopMoreMenu = ({
   dropdown,
   slideUp,
   slideUpText,
+  id,
 }: DesktopMoreMenuProps) => {
   const getColumnWidth = (columns: number) => {
     switch (columns) {
@@ -54,9 +56,12 @@ const DesktopMoreMenu = ({
 
   return dropdown ? (
     <div
-      className={`${styles.dropdown} text-gray-700 pt-1 pb-3 bg-white z-50 ${
+      className={`${
+        styles.dropdown
+      }  text-gray-700 pt-1 pb-3 bg-white z-50 shadow-md ${
         slideUp ? styles.slideUp : ""
       }`}
+      id={id}
     >
       <div
         className={`${

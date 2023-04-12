@@ -24,3 +24,10 @@ export interface SearchProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
 }
+
+export interface HeaderProps {
+  headerData: HeaderData;
+  searchResults: React.ReactNode;
+  searchQuery?: string;
+  setSearchQuery?: (searchQuery: string) => void;
+}

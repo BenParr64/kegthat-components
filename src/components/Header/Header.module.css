@@ -2,7 +2,6 @@
 .dropdown {
   animation-name: slide-down;
   animation-duration: 0.5s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .slideUp {
@@ -35,19 +34,7 @@
 
 /* Styling for managing the search bar slide in */
 
-.searchSlideIn {
-  animation-name: slide-left;
-  animation-duration: 0.5s;
-}
 
-@keyframes slide-left {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
 
 .headerNavContainerSlideUp {
   position: relative;

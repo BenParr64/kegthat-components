@@ -1,0 +1,17 @@
+.searchSlideIn {
+  animation-name: slide-left;
+  animation-duration: 0.5s;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.iconHover {
+  background-color: var(--kgrey-hover);
+}

@@ -1,18 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Children, HeaderData, NavLink } from "./Header.types";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { Children, HeaderProps, NavLink } from "./Header.types";
 import Image from "next/image";
 import DesktopMoreMenu from "./DesktopMoreMenu";
 import styles from "./Header.module.css";
-import Search from "./Search";
+import Search from "../SearchInput/Search";
 import SearchResults from "./SearchResults";
 import Link from "next/link";
-
-export interface HeaderProps {
-  headerData: HeaderData;
-  searchResults: React.ReactNode;
-  searchQuery?: string;
-  setSearchQuery?: (searchQuery: string) => void;
-}
 
 const Header = ({
   headerData,
@@ -26,41 +19,38 @@ const Header = ({
   const [navIsMouseOver, setNavIsMouseOver] = useState(false);
   const [dropdownIsMouseOver, setDropdownIsMouseOver] = useState(false);
   const [searchFocused, setSearchFocused] = useState(false);
+  const headerRef = useRef<HTMLHeadingElement>(null);
+  const [translateYValue, setTranslateYValue] = useState(0);
 
-  let slideUpTimeout: NodeJS.Timeout;
+  const handleMouseEnter = useCallback(
+    (navLink: NavLink) => {
+      if (dropdown && !slideUp) {
+        setSlideUpText(true);
+        setTimeout(() => setSlideUpText(false), 500);
+      }
+      setDropdown(navLink.children);
+    },
+    [dropdown, slideUp]
+  );
 
-  const handleMouseEnter = (navLink: NavLink) => {
-    if (dropdown && !slideUp) {
-      setSlideUpText(true);
-      setTimeout(() => setSlideUpText(false), 500);
-    }
-    setDropdown(navLink.children);
-    clearTimeout(slideUpTimeout);
-  };
-
-  const closeDropdown = () => {
+  const closeDropdown = useCallback(() => {
     setSlideUp(true);
 
     setTimeout(() => {
       setSlideUp(false);
       setDropdown(undefined);
     }, 450);
-  };
+  }, []);
 
   useEffect(() => {
     if (navIsMouseOver || dropdownIsMouseOver) return;
-
     closeDropdown();
-  }, [navIsMouseOver, dropdownIsMouseOver]);
+  }, [navIsMouseOver, dropdownIsMouseOver, closeDropdown]);
 
   useEffect(() => {
     if (!searchFocused) return;
-
     closeDropdown();
-  }, [searchFocused]);
-
-  const headerRef = useRef<HTMLHeadingElement>(null);
-  const [translateYValue, setTranslateYValue] = useState(0);
+  }, [searchFocused, closeDropdown]);
 
   useEffect(() => {
     if (headerRef.current) {
@@ -69,98 +59,121 @@ const Header = ({
     }
   }, []);
 
+  const handleCancelSearchQuery = () => {
+    if (!setSearchQuery) return;
+
+    setSearchQuery("");
+    setSearchFocused(false);
+  };
+
   const slideUpSearchKeyframes = `
-  @keyframes slide-up-search {
-    0% {
-      transform: translateY(${translateYValue}px);
+    @keyframes slide-up-search {
+      0% {
+        transform: translateY(${translateYValue}px);
+      }
+      50% {
+        transform: translateY(${translateYValue}px);
+      }
+      100% {
+        transform: translateY(0%);
+      }
     }
-    50% {
-      transform: translateY(${translateYValue}px);
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-`;
+  `;
+
+  const headerClass = `bg-white shadow-md shadow-gray-200 z-30 ${
+    styles.headerNavContainerSlideUp
+  } ${searchFocused ? styles.headerNavContainerSlideUpFocused : ``}`;
+
+  const navClass = `w-full flex items-center justify-between px-4 md:px-6 z-10 container mx-auto`;
+  const navItemClass = "relative mr-6 hover:underline";
+  const navLinkClass = "text-gray-700 hover:text-gray-900";
 
   return (
     <>
       <style>{slideUpSearchKeyframes}</style>
-      <header
-        ref={headerRef}
-        className={`bg-white shadow-md shadow-gray-200 z-30 ${
-          styles.headerNavContainerSlideUp
-        } ${searchFocused ? styles.headerNavContainerSlideUpFocused : ``}`}
-        style={{
-          transform: `translateY(0px)`,
-          animationName: searchFocused ? `slide-up-search` : "",
-        }}
-      >
-        <nav
-          className={`w-full flex items-center justify-between px-4 md:px-6 z-10 container mx-auto`}
-          onMouseEnter={() => setNavIsMouseOver(true)}
-          onMouseLeave={() => setNavIsMouseOver(false)}
-        >
-          <div className={`flex items-center`}>
-            <Link href="/">
-              <Image
-                src={headerData.logo}
-                alt="Logo"
-                width={80}
-                height={80}
-                priority
-              />
-            </Link>
-          </div>
-          {!searchFocused && (
-            <div className="ml-auto md:ml-0">
-              <ul className="hidden md:flex md:items-center">
-                {headerData.navLinks.map((navLink, index) => (
-                  <li
-                    key={`${navLink.url}-${index}`}
-                    className="relative mr-6 hover:underline"
-                    id="nav-link"
-                    onMouseEnter={() => handleMouseEnter(navLink)}
-                  >
-                    <a
-                      href={navLink.url}
-                      className="text-gray-700 hover:text-gray-900"
-                    >
-                      {navLink.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {searchQuery !== undefined && setSearchQuery !== undefined && (
-            <>
-              <Search
-                searchFocused={searchFocused}
-                setSearchFocused={setSearchFocused}
-                searchQuery={searchQuery}
-                setSearchQuery={setSearchQuery}
-              />
-              {searchFocused && (
-                <button onClick={() => setSearchFocused(false)}>Cancel</button>
-              )}
-            </>
-          )}
-        </nav>
+      <header>
         <div
-          className={`w-screen absolute overflow-hidden`}
-          id="dropdown"
-          onMouseEnter={() => setDropdownIsMouseOver(true)}
-          onMouseLeave={() => setDropdownIsMouseOver(false)}
+          ref={headerRef}
+          className={headerClass}
+          style={{
+            transform: `translateY(0px)`,
+            animationName: searchFocused ? `slide-up-search` : "",
+          }}
         >
-          <DesktopMoreMenu
-            dropdown={dropdown}
-            slideUp={slideUp}
-            slideUpText={slideUpText}
-          />
+          <nav
+            className={navClass}
+            onMouseEnter={() => setNavIsMouseOver(true)}
+            onMouseLeave={() => setNavIsMouseOver(false)}
+          >
+            <div className={`flex items-center`}>
+              <Link href="/">
+                <Image
+                  src={headerData.logo}
+                  alt="Logo"
+                  width={80}
+                  height={80}
+                  priority
+                />
+              </Link>
+            </div>
+            {!searchFocused && (
+              <div className="ml-auto md:ml-0">
+                <ul className="hidden md:flex md:items-center">
+                  {headerData.navLinks.map((navLink, index) => (
+                    <li
+                      key={`${navLink.url}-${index}`}
+                      className={navItemClass}
+                      id="nav-link"
+                      onMouseEnter={() => handleMouseEnter(navLink)}
+                    >
+                      <Link
+                        href={navLink.url ?? "#"}
+                        className={navLinkClass}
+                        aria-haspopup={navLink.children ? "true" : undefined}
+                        aria-expanded={
+                          navLink.children && dropdown ? "true" : "false"
+                        }
+                      >
+                        {navLink.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {searchQuery !== undefined && setSearchQuery !== undefined && (
+              <>
+                <Search
+                  searchFocused={searchFocused}
+                  setSearchFocused={setSearchFocused}
+                  searchQuery={searchQuery}
+                  setSearchQuery={setSearchQuery}
+                />
+                {searchFocused && (
+                  <button onClick={handleCancelSearchQuery}>
+                    Cancel
+                  </button>
+                )}
+              </>
+            )}
+          </nav>
+          <nav
+            className={`w-screen absolute overflow-hidden`}
+            id="dropdown"
+            aria-controls="dropdown-menu"
+            onMouseEnter={() => setDropdownIsMouseOver(true)}
+            onMouseLeave={() => setDropdownIsMouseOver(false)}
+          >
+            <DesktopMoreMenu
+              dropdown={dropdown}
+              slideUp={slideUp}
+              slideUpText={slideUpText}
+              id="dropdown-menu"
+            />
+          </nav>
         </div>
+        {searchFocused && <SearchResults searchResults={searchResults} />}
       </header>
-      {searchFocused && <SearchResults searchResults={searchResults} />}
     </>
   );
 };

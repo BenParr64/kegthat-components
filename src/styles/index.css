@@ -2,5 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,800;1,100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,800;1,100&display=swap");
 
+/* Set default font family */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Set heading font weights */
+h1 {
+  font-weight: 700; /* bold */
+}
+
+h2 {
+  font-weight: 600; /* semi-bold */
+}
+
+h3 {
+  font-weight: 500; /* medium */
+}
+
+/* Set font size for paragraphs */
+p {
+  font-size: 16px;
+}
