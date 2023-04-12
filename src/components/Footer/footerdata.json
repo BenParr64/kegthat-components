@@ -1,0 +1,49 @@
+{
+  "socials": [
+    {
+      "icon": "twitter",
+      "url": "/"
+    },
+    {
+      "icon": "facebook",
+      "url": "/"
+    },
+    {
+      "icon": "youtube",
+      "url": "/"
+    },
+    {
+      "icon": "instagram",
+      "url": "/"
+    },
+    {
+      "icon": "tiktok",
+      "url": "/"
+    }
+  ],
+  "companyDetails": {
+    "address": {
+      "address1": "KegThat",
+      "address2": "Hooton Works",
+      "city": "Ellesmere Port, Hooton",
+      "country": "United Kingdom",
+      "postcocde": "CH66 7NB"
+    },
+    "contact": {
+      "tel": {
+        "link": "tel:+441513742833",
+        "display": "+44 (0) 151 374 2833"
+      },
+      "email": "sales@kegthat.com"
+    },
+    "business": {
+      "companyReg": "12423451",
+      "tradingName": "Redstones Trading Trading as Kegthat",
+      "vatNumber": "",
+      "cardPaymentsImage": {
+        "src": "https://kegthat.com/wp-content/uploads/2023/04/Visa.png",
+        "alt": "card payment providers"
+      }
+    }
+  }
+}
