@@ -6,6 +6,9 @@ import styles from "./Header.module.css";
 import Search from "../SearchInput/Search";
 import SearchResults from "./SearchResults";
 import Link from "next/link";
+import HamburgerIcon from "../..//Icons/Hamburger";
+import MobileMenu from "./MobileMenu/MobileMenu";
+import ClearIcon from "../../Icons/Clear";
 
 const Header = ({
   headerData,
@@ -20,7 +23,11 @@ const Header = ({
   const [dropdownIsMouseOver, setDropdownIsMouseOver] = useState(false);
   const [searchFocused, setSearchFocused] = useState(false);
   const headerRef = useRef<HTMLHeadingElement>(null);
-  const [translateYValue, setTranslateYValue] = useState(0);
+  const [heightAboveHeader, setHeightAboveHeader] = useState(0);
+
+  const [mobileMenuExpanded, setMobileMenuExpanded] = useState(false);
+
+  const showSearch = searchQuery !== undefined && setSearchQuery !== undefined;
 
   const handleMouseEnter = useCallback(
     (navLink: NavLink) => {
@@ -55,7 +62,7 @@ const Header = ({
   useEffect(() => {
     if (headerRef.current) {
       const headerPosition = headerRef.current.getBoundingClientRect().top;
-      setTranslateYValue(headerPosition);
+      setHeightAboveHeader(headerPosition);
     }
   }, []);
 
@@ -66,13 +73,22 @@ const Header = ({
     setSearchFocused(false);
   };
 
+  const toggleMobileMenu = () => {
+    setMobileMenuExpanded(!mobileMenuExpanded);
+    if (!mobileMenuExpanded) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  };
+
   const slideUpSearchKeyframes = `
     @keyframes slide-up-search {
       0% {
-        transform: translateY(${translateYValue}px);
+        transform: translateY(${heightAboveHeader}px);
       }
       50% {
-        transform: translateY(${translateYValue}px);
+        transform: translateY(${heightAboveHeader}px);
       }
       100% {
         transform: translateY(0%);
@@ -80,9 +96,11 @@ const Header = ({
     }
   `;
 
-  const headerClass = `bg-white shadow-md shadow-gray-200 z-30 ${
+  const headerClass = `bg-white shadow-md shadow-gray-200 z-50  ${
     styles.headerNavContainerSlideUp
-  } ${searchFocused ? styles.headerNavContainerSlideUpFocused : ``}`;
+  } ${searchFocused ? styles.headerNavContainerSlideUpFocused : ``} ${
+    mobileMenuExpanded ? "shadow-none" : ""
+  }`;
 
   const navClass = `w-full flex items-center justify-between px-4 md:px-6 z-10 container mx-auto`;
   const navItemClass = "relative mr-6 hover:underline";
@@ -141,7 +159,7 @@ const Header = ({
                 </ul>
               </div>
             )}
-            {searchQuery !== undefined && setSearchQuery !== undefined && (
+            {showSearch && (
               <>
                 <Search
                   searchFocused={searchFocused}
@@ -150,28 +168,41 @@ const Header = ({
                   setSearchQuery={setSearchQuery}
                 />
                 {searchFocused && (
-                  <button onClick={handleCancelSearchQuery}>
-                    Cancel
-                  </button>
+                  <button onClick={handleCancelSearchQuery}>Cancel</button>
                 )}
               </>
             )}
+            <button
+              className="lg:hidden w-10 text-gray-600"
+              onClick={toggleMobileMenu}
+            >
+              {mobileMenuExpanded ? <ClearIcon /> : <HamburgerIcon />}
+            </button>
           </nav>
-          <nav
-            className={`w-screen absolute overflow-hidden`}
-            id="dropdown"
-            aria-controls="dropdown-menu"
-            onMouseEnter={() => setDropdownIsMouseOver(true)}
-            onMouseLeave={() => setDropdownIsMouseOver(false)}
-          >
-            <DesktopMoreMenu
-              dropdown={dropdown}
-              slideUp={slideUp}
-              slideUpText={slideUpText}
-              id="dropdown-menu"
-            />
+          <nav>
+            <div
+              className={`hidden lg:block w-screen absolute overflow-hidden`}
+              id="dropdown"
+              aria-controls="dropdown-menu"
+              onMouseEnter={() => setDropdownIsMouseOver(true)}
+              onMouseLeave={() => setDropdownIsMouseOver(false)}
+            >
+              <DesktopMoreMenu
+                dropdown={dropdown}
+                slideUp={slideUp}
+                slideUpText={slideUpText}
+                id="dropdown-menu"
+              />
+            </div>
           </nav>
         </div>
+        {mobileMenuExpanded && (
+          <div
+            className={`lg:hidden ${styles.headerNavContainerMobileExpanded}`}
+          >
+            <MobileMenu navLinks={headerData.navLinks} />
+          </div>
+        )}
         {searchFocused && <SearchResults searchResults={searchResults} />}
       </header>
     </>

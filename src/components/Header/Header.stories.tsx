@@ -60,7 +60,7 @@ export const NoSearch = () => {
 
 const Content = () => (
   <>
-    <div className="mt-20">Content</div>
+    <div className="h-screen w-full bg-gray-200">Content here</div>
   </>
 );
 

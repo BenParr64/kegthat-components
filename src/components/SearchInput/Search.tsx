@@ -50,7 +50,7 @@ const Search = ({
   const hoverClasses = `bg-kgrey-1 hover:bg-kgrey-hover hover:placeholder-kgrey-hover-1 rounded-full`;
 
   return (
-    <div className={` relative ${searchFocused ? styles.searchSlideIn : ""} `}>
+    <div className={` relative ${searchFocused ? styles.searchSlideIn : "hidden lg:block"} `}>
       <input
         className={`w-72 pl-14 pr-4 py-3 focus:outline-none ${hoverClasses}`}
         value={searchQuery}
@@ -62,7 +62,7 @@ const Search = ({
       <button
         ref={searchIconRef}
         onClick={handleSearchIconClick}
-        className={`text-gray-600 absolute left-0 top-0 rounded-full px-3 py-3 z-10 ${hoverClasses}`}
+        className={`text-gray-600 absolute left-0 top-0 rounded-full px-3 py-3 ${hoverClasses} w-12 h-12`}
       >
         <SearchIcon />
       </button>
@@ -70,7 +70,7 @@ const Search = ({
         <button
           ref={clearIconRef}
           onClick={handleClearIconClick}
-          className={`text-gray-500 absolute right-0 top-0 rounded-full px-3 py-3 z-10 ${hoverClasses}`}
+          className={`text-gray-500 absolute right-0 top-0 rounded-full px-3 py-3 ${hoverClasses} w-12 h-12`}
         >
           <ClearIcon />
         </button>

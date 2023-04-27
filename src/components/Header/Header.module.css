@@ -50,6 +50,25 @@
   animation-duration: 1s;
 }
 
+.headerNavContainerMobileExpanded{
+  position: fixed;
+  inset: 0;
+  top: 0;
+  z-index: 30;
+  animation-name: slide-down-mobile;
+  animation-duration: 1s;
+  background-color: white;
+  overflow: hidden;
+}
+
+@keyframes slide-down-mobile {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
 
 
 .searchContentContainer {
