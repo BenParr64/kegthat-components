@@ -11,3 +11,22 @@
     transform: translateY(0);
   }
 }
+
+
+.mobileMoreMenu{
+  position: fixed;
+  inset: 0;
+  top: 0;
+  z-index: 999;
+  animation-name: slide-right;
+  animation-duration: 0.5s;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

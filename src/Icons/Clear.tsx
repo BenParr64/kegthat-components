@@ -1,6 +1,6 @@
 import React from "react";
 
-const ClearIcon = () => {
+export const ClearIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,4 +18,3 @@ const ClearIcon = () => {
   );
 };
 
-export default ClearIcon;

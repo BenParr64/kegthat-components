@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchIcon = () => {
+export const SearchIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,5 +17,3 @@ const SearchIcon = () => {
     </svg>
   );
 };
-
-export default SearchIcon;

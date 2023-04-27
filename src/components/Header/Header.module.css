@@ -54,7 +54,7 @@
   position: fixed;
   inset: 0;
   top: 0;
-  z-index: 30;
+  z-index: 10;
   animation-name: slide-down-mobile;
   animation-duration: 1s;
   background-color: white;

@@ -6,9 +6,7 @@ import styles from "./Header.module.css";
 import Search from "../SearchInput/Search";
 import SearchResults from "./SearchResults";
 import Link from "next/link";
-import HamburgerIcon from "../..//Icons/Hamburger";
 import MobileMenu from "./MobileMenu/MobileMenu";
-import ClearIcon from "../../Icons/Clear";
 
 const Header = ({
   headerData,
@@ -96,13 +94,13 @@ const Header = ({
     }
   `;
 
-  const headerClass = `bg-white shadow-md shadow-gray-200 z-50  ${
+  const headerClass = `bg-white shadow-md shadow-gray-200 z-20 ${
     styles.headerNavContainerSlideUp
   } ${searchFocused ? styles.headerNavContainerSlideUpFocused : ``} ${
     mobileMenuExpanded ? "shadow-none" : ""
   }`;
 
-  const navClass = `w-full flex items-center justify-between px-4 md:px-6 z-10 container mx-auto`;
+  const navClass = `w-full flex items-center justify-between px-4 md:px-6 container mx-auto`;
   const navItemClass = "relative mr-6 hover:underline";
   const navLinkClass = "text-gray-700 hover:text-gray-900";
 
@@ -173,10 +171,10 @@ const Header = ({
               </>
             )}
             <button
-              className="lg:hidden w-10 text-gray-600"
+              className="lg:hidden w-20 text-gray-600"
               onClick={toggleMobileMenu}
             >
-              {mobileMenuExpanded ? <ClearIcon /> : <HamburgerIcon />}
+              {mobileMenuExpanded ? <span className="hover:underline text-xl">Close</span> : <span className="hover:underline text-xl">Menu</span>}
             </button>
           </nav>
           <nav>
@@ -203,6 +201,8 @@ const Header = ({
             <MobileMenu navLinks={headerData.navLinks} />
           </div>
         )}
+        {/* This uses react portals to display more menu here... */}
+        <div id="mobile-more-menu-root"/>
         {searchFocused && <SearchResults searchResults={searchResults} />}
       </header>
     </>

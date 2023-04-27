@@ -2,10 +2,6 @@
   "logo": "https://kegthat.com/wp-content/uploads/2020/05/cropped-keg-that.jpg",
   "navLinks": [
     {
-      "title": "Home",
-      "url": "/"
-    },
-    {
       "title": "Kits",
       "url": "/kits",
       "children": {

@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 import styles from "./Search.module.css";
 import { SearchProps } from "../Header/Header.types";
-import ClearIcon from "../../Icons/Clear";
-import SearchIcon from "../../Icons/Search";
+import {SearchIcon, ClearIcon} from "../../Icons";
 
 const Search = ({
   searchFocused,
