@@ -9,7 +9,7 @@ export interface MobileMenuProps {
 }
 
 const MobileMenu = ({ navLinks }: MobileMenuProps) => {
-  const [currentLinks, setCurrentLinks] = useState(navLinks);
+  const [currentLink, setCurrentLink] = useState<NavLink>();
   const [prevLink, setPrevLink] = useState<NavLink>();
   const [showMoreMenu, setShowMoreMenu] = useState(false);
 
@@ -21,9 +21,8 @@ const MobileMenu = ({ navLinks }: MobileMenuProps) => {
       return;
     }
 
-    // setCurrentLinks(navLink.children.links);
+    setCurrentLink(navLink);
     setShowMoreMenu(true);
-    setPrevLink(navLink);
   };
 
   return (
@@ -31,11 +30,18 @@ const MobileMenu = ({ navLinks }: MobileMenuProps) => {
       <div
         className={`shadow-md shadow-gray-200 z-30 h-full pt-20 px-5 ${styles.mobileMenuDropdown}`}
       >
-        {showMoreMenu && <MobileMoreMenu setShowMoreMenu={setShowMoreMenu}/>}
-
+        {showMoreMenu && currentLink && (
+          <MobileMoreMenu
+            setShowMoreMenu={setShowMoreMenu}
+            prevLink={prevLink}
+            setPrevLink={setPrevLink}
+            currentLink={currentLink}
+            setCurrentLink={setCurrentLink}
+          />
+        )}
 
         <ul className=" text-black text-xl mt-8">
-          {currentLinks.map((navLink, index) => (
+          {navLinks.map((navLink, index) => (
             <li key={`${navLink.url}-${index}`} id="nav-link">
               <button
                 className="flex justify-between mb-2 w-full"
